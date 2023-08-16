@@ -73,8 +73,7 @@ RUN chmod +x /start-celerybeat
 
 
 # copy application code to WORKDIR
-COPY api/ ${APP_HOME}
-COPY manage.py ${APP_HOME}
+COPY . ${APP_HOME}
 
 ENTRYPOINT ["/entrypoint"]
 RUN chmod +x /entrypoint
