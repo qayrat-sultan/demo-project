@@ -61,11 +61,12 @@ services:
   redis:
     image: redis
     container_name: demo_redis
+    hostname: redisdb
     ports:
-      - "6381:6381"
+      - "6383:6383"
     volumes:
       - redis_data:/data
-    command: redis-server --port 6381
+    command: redis-server --port 6383
     networks:
       - tg_bot
 
